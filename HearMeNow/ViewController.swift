@@ -80,6 +80,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     do {
                         soundPlayer = try AVAudioPlayer(contentsOfURL: url)
                         soundPlayer.delegate = self
+                        soundPlayer.enableRate = true
+                        soundPlayer.rate = 0.5
                         mainLabel.text = "YEAHHHH"
                     } catch {
                         mainLabel.text = "CATCH CATCH CATCH"
